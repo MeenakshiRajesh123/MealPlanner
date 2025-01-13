@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--/*COMP3450: Calvin Thomschke, Jaxon Isnardy, and Meenakshi Rajesh*/-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <Button
+        android:id="@+id/loginUser"
+        android:layout_width="117dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="376dp"
+        android:backgroundTint="@color/list"
+        android:text="Log In"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/loginTitle"
+        android:layout_width="match_parent"
+        android:layout_height="71dp"
+        android:background="@color/header"
+        android:gravity="center"
+        android:text="Log In"
+        android:textColor="@color/white"
+        android:textSize="42dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/returnButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/returnButton"
+        android:layout_width="71dp"
+        android:layout_height="71dp"
+        android:background="@color/header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_media_previous" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="208dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/list"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:textColor="@color/white"
+        android:hint="Password"
+        android:paddingHorizontal="16dp"
+        android:textColorHint="#777"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextUsername" />
+
+    <EditText
+        android:id="@+id/editTextUsername"
+        android:layout_width="210dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="144dp"
+        android:background="@color/list"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Username"
+        android:paddingHorizontal="16dp"
+        android:textColorHint="#777"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginTitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--/*COMP3450: Calvin Thomschke, Jaxon Isnardy, and Meenakshi Rajesh*/-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:background="@color/background"
+    android:layout_height="match_parent"
+    tools:context=".RecipeInfo">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:id="@+id/returnButton"
+                android:layout_width="71dp"
+                android:layout_height="71dp"
+                android:layout_weight="0"
+                android:background="@color/header"
+                app:layout_constraintEnd_toStartOf="@+id/recipeTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@android:drawable/ic_media_previous" />
+
+            <TextView
+                android:id="@+id/recipeTitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/header"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="name"
+                android:textColor="@color/white"
+                android:autoSizeTextType="uniform"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/returnButton"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ScrollView
+                android:id="@+id/scrollView2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:fadeScrollbars="false"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:scrollbarSize="8dp"
+                android:scrollbars="vertical"
+                app:layout_constraintEnd_toStartOf="@+id/recipeImage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recipeTitle">
+
+                <TextView
+                    android:id="@+id/recipeIngredients"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Ingredients"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </ScrollView>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/recipeImage"
+                    android:layout_width="128dp"
+                    android:layout_height="128dp"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/serving"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Serving Size: "
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/recipeServings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="Servings"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="11"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+            app:layout_constraintVertical_bias="0.5">
+
+            <TextView
+                android:id="@+id/recipeDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Description"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </ScrollView>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
